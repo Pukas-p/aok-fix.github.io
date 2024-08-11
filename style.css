@@ -1,0 +1,137 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: azure;
+}
+
+header {
+    text-align: center;
+    background-color: royalblue;
+    color: black;
+    padding: 3rem 2rem;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+header h1 {
+    font-size: 4rem;
+}
+
+header h2 {
+    margin-top: -30px;
+}
+
+.container {
+    max-width: 1000px; /* Ajusta según sea necesario */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 15px; /* Ajusta el padding horizontal */
+    display: flex;
+    justify-content: space-between; /* Espacio entre columnas */
+    flex-wrap: wrap;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.container img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio en blanco debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
+}
+
+.left-column, .right-column {
+    width: 48%; /* Ajusta el ancho de las columnas */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.post, .posteo {
+    transition: all 0.3s ease;
+    background-color: white;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 0.25rem;
+    cursor: pointer;
+    margin: 1rem 0;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+section article h2, section article a {
+    margin: 1rem;
+}
+
+section article a {
+    margin-top: -0.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+a {
+    display: inline-block;
+}
+
+section article a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+section article:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: royalblue;
+    padding: 1rem 2rem; /* Ajustar padding */
+    text-align: center; /* Centra el texto dentro del footer */
+    margin: 0 auto; /* Centra el footer */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+footer a {
+    text-decoration: none;
+    color: #efefef;
+    padding: 0.5rem 1rem; /* Reducir padding para enlaces */
+    cursor: pointer;
+    display: inline-block; /* Asegura que los enlaces estén en línea */
+}
+
+footer a:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+    color: aquamarine;
+}
+
+/* Media Queries para Dispositivos Móviles */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia la dirección del flex a columna en pantallas medianas */
+        padding: 15px;
+    }
+    .left-column, .right-column {
+        width: 100%; /* Las columnas ocupan todo el ancho disponible */
+        margin-bottom: 1rem; /* Añadir margen inferior entre columnas */
+    }
+    header h1 {
+        font-size: 3rem; /* Ajustar tamaño del texto del encabezado */
+    }
+    footer {
+        padding: 1rem; /* Reducir padding del footer */
+    }
+    footer a {
+        font-size: 0.9rem; /* Ajustar tamaño del texto del enlace */
+        padding: 0.5rem; /* Reducir padding de los enlaces */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.5rem; /* Ajustar aún más el tamaño del texto del encabezado */
+    }
+    footer {
+        padding: 0.5rem; /* Reducir padding del footer en pantallas muy pequeñas */
+    }
+    footer a {
+        font-size: 0.8rem; /* Ajustar tamaño del texto del enlace */
+        padding: 0.4rem; /* Reducir padding de los enlaces */
+    }
+}
